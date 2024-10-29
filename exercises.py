@@ -27,7 +27,7 @@ class Game():
     # render the game so it can be seen
     def print_board(self):
         b = self.board
-        print(f"""
+        print(f""",   
                 A   B   C
             1)  {b['a1'] or ' '} | {b['b1'] or ' '} | {b['c1'] or ' '}
                 ----------
@@ -42,6 +42,16 @@ class Game():
         elif game_instance.winner != None:
             print(f"{self.winner} wins the game!")
         else: print(f"It's player {self.turn}'s turn!")
+    # handle player input
+    #   force the users input into an acceptable format
+    while True:
+        move = input(f'Enter a valid movie (example: A1): ').lower()  
+
+
+
+
+
+        
 
 game_instance = Game()
 game_instance.play_game()
